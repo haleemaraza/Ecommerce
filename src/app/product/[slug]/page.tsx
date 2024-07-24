@@ -21,10 +21,12 @@ async function getData(slug: string) {
 const data = await client.fetch(query)
 // console.log("imag" ,data);
 
+
 return data
 
 
 }
+
 
 
 
