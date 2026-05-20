@@ -5,27 +5,24 @@ import Image from 'next/image'
 
 const OurProduct = () => {
   return (
-    <div className='text-center p-12 bg-[#F5F4EC] rounded-lg'>
-      <h3 className='text-2xl font-400 raleway '>Our Products</h3>
-      <p className='mb-5 raleway text-gray-400'>Designing impeccable fits for both, we blend precision tailoring with timeless style</p>
-      <div className='flex flex-wrap justify-center gap-8'>
-        <div className='flex gap-20 rounded-lg'>
-          <Link
-            href="/Women"
-            className='text-gray-900 raleway'
-          > <Image src={Women} alt="women" width={100} height={100} />
-            Women
-          </Link>
-          <Link
-            href="/Men"
-            className='text-gray-900 raleway'
-          ><Image src={Men} alt="men" width={100} height={100} className='object-top object-cover max-h-[150px]' />
-            Men
-          </Link>
-        </div>
+    <div className='text-center py-12 px-4 bg-[#F5F4EC]'>
+      <h3 className='text-2xl font-semibold raleway mb-2'>Our Products</h3>
+      <p className='mb-8 raleway text-gray-400 text-sm max-w-md mx-auto'>Designing impeccable fits for both, we blend precision tailoring with timeless style</p>
+      <div className='flex flex-row justify-center gap-6 sm:gap-12'>
+        <Link href="/Women" className='group flex flex-col items-center text-gray-900 raleway'>
+          <div className='relative w-36 h-48 sm:w-52 sm:h-64 overflow-hidden rounded-xl shadow-sm'>
+            <Image src={Women} alt="women" fill className='object-cover object-top transition-transform duration-300 group-hover:scale-105' />
+          </div>
+          <span className='mt-3 text-sm sm:text-base font-medium tracking-wide'>Women</span>
+        </Link>
+        <Link href="/Men" className='group flex flex-col items-center text-gray-900 raleway'>
+          <div className='relative w-36 h-48 sm:w-52 sm:h-64 overflow-hidden rounded-xl shadow-sm'>
+            <Image src={Men} alt="men" fill className='object-cover object-top transition-transform duration-300 group-hover:scale-105' />
+          </div>
+          <span className='mt-3 text-sm sm:text-base font-medium tracking-wide'>Men</span>
+        </Link>
       </div>
     </div>
-
   )
 }
 
