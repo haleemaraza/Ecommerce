@@ -38,14 +38,14 @@ export default async function ProductPage({
     const data:fullProduct  = await getData(params.slug)
     return(
         <div className="bg-white">
-           <div className="mx:auto max-w-screen-xl px-4 md:px-8">
-            <div className="grid gap-8 md:grid-cols-2">
+           <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+            <div className="grid gap-8 md:grid-cols-2 pt-32">
                 <ImageGallery image={data.images} />
 
-                <div className="md:py-8 mt-32">
+                <div className="md:py-8">
                     <div className="mb-2 md:mb-3">
                         <span className="mb-0.5 inline-block text-gray-500">
-                            {data.categoryName}
+                 {data.categoryName}
                         </span>
                         <h2 className="text-2xl raleway font-bold text-gray-800 lg:text-3xl">
                             {data.name}
